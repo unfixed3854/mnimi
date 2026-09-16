@@ -1,0 +1,33 @@
+name: Publish container image
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    name: Build and publish GHCR image
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        run: >-
+          printf '%s' "${{ secrets.GITHUB_TOKEN }}" |
+          podman login ghcr.io
+          --username "${{ github.actor }}"
+          --password-stdin
+
+      - name: Build image
+        run: >-
+          podman build
+          --file Containerfile
+          --tag ghcr.io/unfixed3854/mnimi:latest
+          .
+
+      - name: Push image
+        run: podman push ghcr.io/unfixed3854/mnimi:latest

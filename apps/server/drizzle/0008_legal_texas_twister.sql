@@ -1,0 +1,1 @@
+ALTER TABLE `decks` ADD `pronunciation_speed` text DEFAULT 'normal' NOT NULL;

@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "mnimi",
+    "slug": "mnimi-mobile",
+    "version": "0.1.0",
+    "scheme": "mnimi",
+    "platforms": ["android", "web"],
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      "expo-router",
+      "expo-dev-client",
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon-foreground.png",
+          "color": "#25134d"
+        }
+      ],
+      [
+        "expo-navigation-bar",
+        {
+          "enforceContrast": false,
+          "style": "dark"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "android": {
+      "package": "com.mnimi.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon-foreground.png",
+        "backgroundColor": "#25134d"
+      }
+    }
+  }
+}

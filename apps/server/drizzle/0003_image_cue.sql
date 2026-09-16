@@ -1,0 +1,1 @@
+ALTER TABLE `cards` ADD `image_cue` integer DEFAULT false NOT NULL;

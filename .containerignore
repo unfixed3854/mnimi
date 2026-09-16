@@ -1,0 +1,11 @@
+.git
+.env
+**/.env
+node_modules
+data
+.dev
+dist
+logs
+apps/mobile/android
+docs
+**/*.test.ts

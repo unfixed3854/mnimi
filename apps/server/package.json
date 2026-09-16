@@ -1,0 +1,40 @@
+{
+  "name": "@mnimi/server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --no-env-file ../../scripts/server-dev.mjs",
+    "start": "NODE_ENV=production bun --env-file=.env main.ts",
+    "check": "tsc --noEmit",
+    "test": "vitest run && bun scripts/runtime-smoke.ts",
+    "codex:login": "bun --env-file=.env scripts/codex-login.ts",
+    "db:generate": "bun --env-file=.env run drizzle-kit generate --config drizzle.config.ts",
+    "db:migrate": "bun --env-file=.env run drizzle-kit migrate --config drizzle.config.ts",
+    "db:studio": "bun --env-file=.env run drizzle-kit studio --config drizzle.config.ts",
+    "user:create": "bun --env-file=.env scripts/create-user.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "0.17.4",
+    "@logtape/logtape": "2.3.0",
+    "@mnimi/shared": "workspace:*",
+    "@openai/codex": "0.154.0",
+    "@openrouter/sdk": "0.13.20",
+    "@orpc/server": "1.14.14",
+    "@tanstack/ai": "0.42.0",
+    "@tanstack/ai-openrouter": "0.15.10",
+    "better-auth": "1.6.26",
+    "drizzle-orm": "0.45.2",
+    "effect": "3.22.2",
+    "hono": "4.13.0",
+    "uuidv7": "1.2.1",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.14",
+    "@types/node": "^26.1.1",
+    "drizzle-kit": "0.31.10",
+    "typescript": "~6.0.3",
+    "vitest": "4.1.10"
+  }
+}

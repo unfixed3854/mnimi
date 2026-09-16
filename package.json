@@ -1,0 +1,37 @@
+{
+  "name": "mnimi",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "bun@1.3.13",
+  "workspaces": ["apps/*", "libs/*"],
+  "scripts": {
+    "dev": "bun scripts/dev.mjs",
+    "check": "bun run --workspaces --sequential --if-present check",
+    "test": "bun test ./scripts/dev.test.ts && bun run --workspaces --sequential --if-present test",
+    "mobile:dev": "cd apps/mobile && bun run dev",
+    "mobile:android": "bun run --filter @mnimi/mobile android",
+    "web:dev": "bun run --filter @mnimi/mobile web",
+    "web:build": "bun run --filter @mnimi/mobile build:web",
+    "web:test": "playwright test",
+    "web:test:install": "playwright install chromium",
+    "web:test:server": "bun apps/mobile/e2e/web-server.ts",
+    "mobile:check": "bun run --filter @mnimi/mobile check",
+    "mobile:test": "bun run --filter @mnimi/mobile test",
+    "mobile:smoke": "bun run --filter @mnimi/mobile smoke",
+    "mobile:build:android": "bun run --filter @mnimi/mobile build:android",
+    "server:dev": "bun run --filter @mnimi/server dev",
+    "server:start": "bun run --filter @mnimi/server start",
+    "server:check": "bun run --filter @mnimi/server check",
+    "server:test": "bun run --filter @mnimi/server test",
+    "codex:login": "bun run --filter @mnimi/server codex:login",
+    "user:create": "bun run --filter @mnimi/server user:create",
+    "shared:check": "bun run --filter @mnimi/shared check",
+    "shared:test": "bun run --filter @mnimi/shared test",
+    "db:generate": "bun run --filter @mnimi/server db:generate",
+    "db:migrate": "bun run --filter @mnimi/server db:migrate",
+    "db:studio": "bun run --filter @mnimi/server db:studio"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

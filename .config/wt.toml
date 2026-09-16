@@ -1,0 +1,8 @@
+[[pre-start]]
+copy-env = "cp {{ primary_worktree_path }}/apps/mobile/.env apps/mobile/.env && cp {{ primary_worktree_path }}/apps/server/.env apps/server/.env"
+
+[[pre-start]]
+install-dependencies = "bun install --frozen-lockfile"
+
+[[pre-start]]
+migrate-database = "bun run db:migrate"
