@@ -28,7 +28,7 @@
 - A failed or disconnected operation is never replayed and never crosses providers; only a later operation may start a replacement app-server process.
 - Preserve the current job-cancellation contract: late provider results are ignored by the job layer, but accepted upstream work is not automatically cancelled.
 - Normal automated tests are offline and must not require login or consume Codex allowance.
-- Commit commands below are proposed conventional-commit checkpoints. Under the repository's conservative Beads profile, run them only after the user explicitly authorizes commits.
+- Commit commands below are proposed conventional-commit checkpoints. Under the repository's conservative policy, run them only after the user explicitly authorizes commits.
 
 ---
 
@@ -1570,16 +1570,16 @@ Expected:
 - the first command returns no production router/main fallback;
 - the second returns only the deliberate environment scrub/test assertions;
 - the third shows every operator-facing setting and command;
-- status contains only the planned files plus Beads metadata, with no auth cache,
+- status contains only the planned files, with no auth cache,
   generated schemas, or temporary image.
 
-- [ ] **Step 6: Update and close Beads only after all acceptance checks pass**
+- [ ] **Step 6: Update and close Pimp only after all acceptance checks pass**
 
 Run:
 
 ```bash
-bd update mnimi-x8p --notes "Implemented the approved Codex provider design; full check/test results and container verification are recorded in the handoff."
-bd close mnimi-x8p --reason "Codex and OpenRouter provider modes implemented and verified"
+pimp comment mnimi-570c555fa2424fe4bd389b44935dd070 "Implemented the approved Codex provider design; full check/test results and container verification are recorded in the handoff."
+pimp close mnimi-570c555fa2424fe4bd389b44935dd070
 ```
 
 Do not close the issue if any required code/test/documentation work remains. If
@@ -1595,6 +1595,6 @@ git commit -m "docs(ai): document codex provider deployment"
 
 - [ ] **Step 8: Report the conservative-profile handoff**
 
-Report changed files, focused/full validation results, Beads status, whether the
+Report changed files, focused/full validation results, Pimp status, whether the
 container build ran, and the proposed commit commands if authorization was not
 granted. Do not push this ephemeral branch.

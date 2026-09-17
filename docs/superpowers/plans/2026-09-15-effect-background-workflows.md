@@ -72,7 +72,7 @@ bun run server:check
 git diff --check
 ```
 
-Record the output count and any existing environment warnings in the Beads issue notes. Do not change production behavior in this task.
+Record the output count and any existing environment warnings in Pimp comments. Do not change production behavior in this task.
 
 ## Task 2: Add the selected Effect background-provider seam
 
@@ -550,7 +550,7 @@ git diff --check
 **Files:**
 - Modify only if evidence requires it: `docs/superpowers/specs/2026-09-15-effect-background-workflows-design.md`
 - Modify only if evidence requires it: `docs/superpowers/plans/2026-09-15-effect-background-workflows.md`
-- Modify: Beads issue `mnimi-pi5.4`
+- Modify: Pimp task with source ID `mnimi-pi5.4`
 
 **Interfaces:**
 - Consumes: completed Tasks 1-9 and the approved design.

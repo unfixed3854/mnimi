@@ -38,9 +38,3 @@ apps/mobile/android
 # where `git add -A` sweeps it into a commit.
 .superpowers
 .worktrees
-
-# Beads / Dolt files (added by bd init)
-.dolt/
-*.db
-.beads-credential-key
-.beads/proxieddb/

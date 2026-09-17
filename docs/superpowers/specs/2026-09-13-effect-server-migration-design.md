@@ -5,7 +5,7 @@
 Approved in chat on 2026-09-13. The first child project is specified and
 planned in `docs/superpowers/plans/2026-09-13-effect-foundation.md`.
 
-Tracked by Beads feature `mnimi-pi5`.
+Tracked in Pimp with source ID `mnimi-pi5`.
 
 ## Goal
 
@@ -362,7 +362,7 @@ owned by `scripts/server-dev.mjs`.
 ## Program decomposition
 
 This migration is too large for one safe implementation plan. It is a program
-of child projects, each tracked by a child Beads issue and completed through
+of child projects, each tracked by a child Pimp task and completed through
 its own specification, plan, implementation, and verification cycle.
 
 The child-project boundaries are:
@@ -476,7 +476,7 @@ Drafts, notes, and creation-save remain one ownership group.
 
 Within each child project, worker tasks may be parallelized only after the
 project's central interfaces have landed and only across non-overlapping file
-sets. Completion of a child project is a checkpoint: its Beads issue, focused
+sets. Completion of a child project is a checkpoint: its Pimp task, focused
 gates, full server suite, diff review, and remaining compatibility shims are
 reconciled before the next child project begins.
 
@@ -526,7 +526,7 @@ the repository's active authorization policy.
 
 ## Explicitly deferred work
 
-The following require separate Beads issues if desired:
+The following require separate Pimp tasks if desired:
 
 - replacing Hono or oRPC with Effect Platform HTTP;
 - changing client-visible error payloads;

@@ -69,7 +69,7 @@ verification gate.
 | B OpenRouter/generation | create `effect/ai-generation.ts`, `effect/openrouter.ts`; modify `ai/generate.ts`, `ai/generate-note.ts`, `ai/model-calls.ts`, `ai/openrouter.ts`, `ai/openrouter-image.ts`, `ai/openrouter-provider.ts` | matching new tests and existing `ai/generate*`, `model-calls`, `openrouter*` tests |
 | C Codex | create `effect/codex-runtime.ts`; modify `ai/codex/provider.ts` | create `effect/codex-runtime.test.ts`; modify `ai/codex/provider.test.ts` |
 | D Notifications | create `effect/expo-push.ts`, `effect/notifications.ts`; modify `notifications/expo-push.ts`, `notifications/dispatcher.ts` | create matching Effect tests; modify existing notification tests |
-| Integration | `ai/provider.ts`, `effect/index.ts`, `import-boundary.test.ts`, docs/Beads evidence only | `ai/provider.test.ts` plus import-boundary tests |
+| Integration | `ai/provider.ts`, `effect/index.ts`, `import-boundary.test.ts`, docs/tracker evidence only | `ai/provider.test.ts` plus import-boundary tests |
 
 If a worker discovers that a required change falls outside its owned paths, it
 must report the seam to the primary agent rather than editing the shared file.
@@ -526,7 +526,7 @@ Confirm no Layer/Scope/ManagedRuntime is created per operation, current
 production exports reach the Effect implementation, no forbidden file changed,
 and no generated artifact is staged.
 
-- [ ] **Step 5: Close Beads and record evidence**
+- [ ] **Step 5: Close Pimp and record evidence**
 
 Update each family child with commits, focused tests, reviewer outcome, and
 compatibility/removal seams, then close completed children. Update umbrella
@@ -538,5 +538,5 @@ routers, and final transport/runtime children.
 
 Commit any reviewed integration evidence that belongs in tracked docs. Do not
 push, merge, open a PR, or deploy. Report commits, changed surfaces, exact
-validation evidence, Beads status, credentialed checks, and clean/dirty git
+validation evidence, Pimp status, credentialed checks, and clean/dirty git
 status.

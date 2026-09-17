@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed on 2026-09-15 for Beads feature `mnimi-pi5.5`.
+Proposed on 2026-09-15 for the Pimp-migrated feature with source ID `mnimi-pi5.5`.
 
 ## Goal
 

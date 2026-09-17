@@ -1,9 +1,0 @@
-{
-  "database": "dolt",
-  "backend": "dolt",
-  "dolt_mode": "server",
-  "dolt_server_host": "hera.ide-alioth.ts.net",
-  "dolt_server_user": "beads",
-  "dolt_database": "mnimi",
-  "project_id": "d942e685-5edd-429b-ab6e-8846f81bf105"
-}

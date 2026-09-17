@@ -2,8 +2,8 @@
 
 ## Status
 
-Approved in chat on 2026-09-13. This document specifies Beads child
-`mnimi-pi5.2`, the second child of the Effect migration program tracked by
+Approved in chat on 2026-09-13. This document specifies the Pimp-migrated
+child with source ID `mnimi-pi5.2`, the second child of the Effect migration program tracked by
 `mnimi-pi5`.
 
 This revision records the explicit process-bound lifetime choice: production

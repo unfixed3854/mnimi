@@ -2,8 +2,8 @@
 
 ## Status
 
-Approved in chat on 2026-09-14 as option a. This document specifies Beads
-child `mnimi-pi5.3`, the third child of the Effect migration program tracked
+Approved in chat on 2026-09-14 as option a. This document specifies the
+Pimp-migrated child with source ID `mnimi-pi5.3`, the third child of the Effect migration program tracked
 by `mnimi-pi5`.
 
 The selected approach is an adapter-first migration with four disjoint
@@ -341,7 +341,7 @@ The OpenRouter and Codex owners must not both edit `ai/provider.ts`. The
 integration owner alone forwards the captured environment and reconciles the
 two provider factories after both family commits. The integration owner also
 owns `effect/index.ts`, `import-boundary.test.ts`, any shared test utility,
-Beads closure, and full validation.
+Pimp closure, and full validation.
 
 Each family starts from a clean committed base, follows test-first changes,
 runs its focused characterization suite plus `bun run server:check` and
@@ -390,4 +390,4 @@ check is never reported as passing.
 - Compatibility facades name their later removal slices and no parallel dead
   implementation is introduced.
 - Focused and complete Bun validation passes, import-time side effects remain
-  absent, independent reviews are clean, and the four child Beads close.
+  absent, independent reviews are clean, and the four child Pimp tasks close.

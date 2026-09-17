@@ -10,7 +10,7 @@
 
 **Spec:** `docs/superpowers/specs/2026-09-13-effect-server-migration-design.md`
 
-**Beads:** Parent program `mnimi-pi5`; this child project `mnimi-pi5.1`.
+**Pimp source IDs:** Parent program `mnimi-pi5`; this child project `mnimi-pi5.1`.
 
 ## Global Constraints
 
@@ -1630,7 +1630,7 @@ git commit -m "test(server): add Effect Layer helpers"
 **Files:**
 
 - Verify only; no planned source changes.
-- Update durable state: Beads child `mnimi-pi5.1`.
+- Update durable state: Pimp task with source ID `mnimi-pi5.1`.
 
 **Interfaces:**
 
@@ -1703,8 +1703,8 @@ contains no uncommitted implementation changes.
 Run:
 
 ```bash
-bd close mnimi-pi5.1 --reason="Characterization and Effect foundation implemented and verified"
-bd show mnimi-pi5.1
+pimp close mnimi-11c64b6d99ae4f5fbe980b70b1f6f7e3
+pimp show mnimi-11c64b6d99ae4f5fbe980b70b1f6f7e3
 git status --short --branch
 ```
 
